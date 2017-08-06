@@ -18,10 +18,10 @@ public class ReflectionUtils {
         if (objectAList!=null){
             if (objectBList==null)
                 objectBList = new ArrayList<>();
-            for (Object entity :  objectAList){
-                Object dto = objectBClass.newInstance() ;
-                BeanUtils.copyProperties(entity, dto);
-                objectBList.add(dto);
+            for (Object objectA :  objectAList){
+                Object objectB = objectBClass.newInstance() ;
+                BeanUtils.copyProperties(objectA, objectB);
+                objectBList.add(objectB);
             }
         }else{
             throw new Exception("Nothing to copy. Source Object List is null.");
