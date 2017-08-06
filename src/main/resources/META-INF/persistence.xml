@@ -5,6 +5,7 @@
     <class>com.nexti.dragonstone.entity.DgMobile</class>
     <class>com.nexti.dragonstone.entity.DgMobileControl</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <mapping-file>META-INF/orm.xml</mapping-file>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/dragonglass?zeroDateTimeBehavior=convertToNull"/>
       <property name="javax.persistence.jdbc.user" value="root"/>

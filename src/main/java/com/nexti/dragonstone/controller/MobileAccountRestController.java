@@ -29,12 +29,12 @@ import static org.springframework.web.bind.annotation.RequestMethod.PUT;
  * @author ISCesar
  */
 @RestController
-@RequestMapping(path = "/landing", produces = APPLICATION_JSON_VALUE)
-public class LandingRestController {
+@RequestMapping(path = "/mobileAccount", produces = APPLICATION_JSON_VALUE)
+public class MobileAccountRestController {
     
     private final DgMobileRepository dgMobileRepository;
 
-    public LandingRestController(DgMobileRepository dgMobileRepository) {
+    public MobileAccountRestController(DgMobileRepository dgMobileRepository) {
         this.dgMobileRepository = dgMobileRepository;
     }
     

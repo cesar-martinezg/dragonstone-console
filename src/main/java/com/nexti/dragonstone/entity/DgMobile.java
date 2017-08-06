@@ -14,6 +14,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedNativeQueries;
+import javax.persistence.NamedNativeQuery;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToOne;
@@ -41,7 +43,12 @@ import javax.xml.bind.annotation.XmlTransient;
     , @NamedQuery(name = "DgMobile.findByGcmToken", query = "SELECT d FROM DgMobile d WHERE d.gcmToken = :gcmToken")
     , @NamedQuery(name = "DgMobile.findByCreateTimestamp", query = "SELECT d FROM DgMobile d WHERE d.createTimestamp = :createTimestamp")
     , @NamedQuery(name = "DgMobile.findByUpdateTimestamp", query = "SELECT d FROM DgMobile d WHERE d.updateTimestamp = :updateTimestamp")
-    , @NamedQuery(name = "DgMobile.findByVersion", query = "SELECT d FROM DgMobile d WHERE d.version = :version")})
+    , @NamedQuery(name = "DgMobile.findByVersion", query = "SELECT d FROM DgMobile d WHERE d.version = :version")
+    , @NamedQuery(name = "DgMobile.findWhereVersionLessThan", query="SELECT m FROM DgMobile m WHERE m.version < :version")
+})
+@NamedNativeQueries({
+    
+})
 public class DgMobile implements Serializable {
 
     private static final long serialVersionUID = 1L;
