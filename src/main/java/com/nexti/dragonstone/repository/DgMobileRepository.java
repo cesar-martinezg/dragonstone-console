@@ -25,13 +25,14 @@ public interface DgMobileRepository extends JpaRepository<DgMobile, Integer> {
     //single JPA-JPQL query implementation with custom param names
     DgMobile findByImei(@Param("imei") String imei );
     
-    //JPA-JPQL implementation for complex or native queries (using an XML file)
+    //JPA-JPQL implementation for complex or native queries
     @Query(nativeQuery = false, name = "DgMobile.findWhereVersionLessThan")
     List<DgMobile> findWhereVersionLessThan(@Param("version") int version);
     
-    //JPA-SQL implementation for complex or native queries (using an XML file)
+    //JPA-SQL implementation for complex or native queries
     // with custom param and method names
-    @Query(nativeQuery = true, name = "DgMobile.findWhereVersionGreaterThan")
-    List<DgMobile> findWhereVersionGreaterThan(@Param("version") int version);
+    //@Query(nativeQuery = true, name = "DgMobile.findWhereVersionGreaterThan")
+    //List<DgMobile> findWhereVersionGreaterThan(@Param("version") int version);
     
+    List<DgMobile> findByVersionGreaterThan();
 }

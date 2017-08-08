@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- NOTICE: This file is only used for creating/mapping Entities from database
+             objects. It is not used by Spring boot nor any deployment task.
+-->
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
   <persistence-unit name="com.nexti_dragonstone-console_war_0.0.1PU" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>com.nexti.dragonstone.entity.DgMobile</class>
     <class>com.nexti.dragonstone.entity.DgMobileControl</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
-    <mapping-file>META-INF/orm.xml</mapping-file>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/dragonglass?zeroDateTimeBehavior=convertToNull"/>
       <property name="javax.persistence.jdbc.user" value="root"/>

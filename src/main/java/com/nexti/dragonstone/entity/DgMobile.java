@@ -47,7 +47,7 @@ import javax.xml.bind.annotation.XmlTransient;
     , @NamedQuery(name = "DgMobile.findWhereVersionLessThan", query="SELECT m FROM DgMobile m WHERE m.version < :version")
 })
 @NamedNativeQueries({
-    
+    //@NamedNativeQuery(name="DgMobile.findWhereVersionGreaterThan", query="SELECT * FROM dg_mobile WHERE version > :version")
 })
 public class DgMobile implements Serializable {
 
