@@ -5,9 +5,6 @@
  */
 package com.nexti.dragonstone.dto;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  *
  * @author ISCesar

@@ -33,6 +33,7 @@ public class DgMobileModel {
         if (dgMobileDto==null){
             dgMobileDto = new DgMobileDto();
             BeanUtils.copyProperties(dgMobile, dgMobileDto);
+            BeanUtils.copyProperties(dgMobile.getDgMobileControl(), dgMobileDto);
         }
         return dgMobileDto;
     }

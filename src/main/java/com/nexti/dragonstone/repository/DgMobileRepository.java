@@ -16,11 +16,11 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
  *
  * @author ISCesar
  */
-@RepositoryRestResource
+@RepositoryRestResource(exported = true)
 public interface DgMobileRepository extends JpaRepository<DgMobile, Integer> {
     
     //single JPA-JPQL query implementation
-    DgMobile findByIdMobile(@Param("id") int idMobile);
+    DgMobile findByIdMobile(@Param("idMobile") int idMobile);
     
     //single JPA-JPQL query implementation with custom param names
     DgMobile findByImei(@Param("imei") String imei );
@@ -34,5 +34,5 @@ public interface DgMobileRepository extends JpaRepository<DgMobile, Integer> {
     //@Query(nativeQuery = true, name = "DgMobile.findWhereVersionGreaterThan")
     //List<DgMobile> findWhereVersionGreaterThan(@Param("version") int version);
     
-    List<DgMobile> findByVersionGreaterThan();
+    //List<DgMobile> findByVersionGreaterThan();
 }

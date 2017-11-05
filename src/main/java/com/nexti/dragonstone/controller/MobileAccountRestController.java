@@ -45,14 +45,22 @@ public class MobileAccountRestController {
         try{
             DgMobileModel.copyFromEntityToDto(dgMobileEntityList, dgMobileDtoList);
         }catch(Exception e){
-            
+            e.printStackTrace();
         }
         return dgMobileDtoList;
     }
     
     @RequestMapping(value = "/{id}", method = GET)
-    public Object get(@PathVariable String id) {
-        return null;
+    public Object get(@PathVariable int id) {
+        DgMobileDto dgMobileDto = null;
+        try{
+            DgMobile dgMobile = this.dgMobileRepository.findByIdMobile(id);
+            DgMobileModel dgMobileModel = new DgMobileModel(dgMobile);
+            dgMobileDto = dgMobileModel.getDgMobileDto();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return dgMobileDto;
     }
     
     @RequestMapping(value = "/{id}", method = PUT)
